@@ -13,20 +13,29 @@
   <body>
     <nav>
       <h4>Where in the world?</h4>
+      <div class="button">
+        <i class="far fa-moon"></i>
+        <a href="#">Dark Mode</a>
+      </div>
     </nav>
-    <div class="form">
-      <input id="txt" type="text" placeholder="Search for a country" />
+    <div class="container">
+      <div class="form">
+        <input id="txt" type="text" placeholder="Search for a country" />
 
-      <select name="region" id="region">
-        <option value="">Filter by Region</option>
-        <option value="Americas">Americas</option>
-        <option value="Europe">Europe</option>
-        <option value="Asia">Asia</option>
-        <option value="Oceania">Oceania</option>
-      </select>
+        <select name="region" id="region">
+          <option value="">Filter by Region</option>
+          <option value="Americas">Americas</option>
+          <option value="Europe">Europe</option>
+          <option value="Asia">Asia</option>
+          <option value="Oceania">Oceania</option>
+        </select>
+      </div>
+      <div id="countries"></div>
     </div>
-    <div id="countries"></div>
-
+    <script
+      src="https://kit.fontawesome.com/49b44a44d4.js"
+      crossorigin="anonymous"
+    ></script>
     <script type="module" src="js/app.js"></script>
   </body>
 </html>
