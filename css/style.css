@@ -11,6 +11,32 @@
   font-size: 14px;
   font-family: "Nunito Sans", sans-serif;
 }
+
+.dark-nav {
+  padding: 6px;
+  box-shadow: 0px 1px 1px black;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+  background: var(--DarkBlueElements);
+}
+.dark-body {
+  background: var(--VeryDarkBlueBackgorund);
+}
+
+.dark-controls {
+  background: var(--DarkBlueElements);
+  color: white;
+  box-shadow: 0px 0px 1px black;
+}
+
+.dark-card {
+  background: var(--DarkBlueElements);
+  color: white;
+  box-shadow: 0px 1px 1px black;
+}
+
 body {
   background: var(--VeryLightGrayBackground);
   margin: 0px;
@@ -22,7 +48,9 @@ nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  background: white;
 }
+
 nav h4 {
   margin-left: 30px;
 }
@@ -32,10 +60,8 @@ nav h4 {
   align-items: center;
   cursor: pointer;
 }
-.button a {
-  margin-left: 8px;
-  text-decoration: none;
-  color: var(--VeryDarkBlueText);
+.far {
+  margin-right: 8px;
 }
 
 .container {
@@ -54,9 +80,10 @@ nav h4 {
   box-sizing: border-box;
   border: 0px;
   font-family: "Nunito Sans", sans-serif;
-  box-shadow: 3px 3px 10px rgb(192, 191, 191);
+  box-shadow: 0px 1px 1px rgb(192, 191, 191);
   margin-bottom: 18px;
   border-radius: 4px;
+  outline: none;
 }
 
 .form input::placeholder {
@@ -65,21 +92,25 @@ nav h4 {
 .form select {
   border: 0px;
   padding: 16px;
-  box-shadow: 3px 3px 10px rgb(192, 191, 191);
+  box-shadow: 0px 1px 1px rgb(192, 191, 191);
   font-family: "Nunito Sans", sans-serif;
   border-radius: 4px;
+  outline: none;
+  margin-bottom: 30px;
 }
 
 .card {
   background: white;
   margin-bottom: 30px;
-  box-shadow: 2px 2px 10px rgb(177, 174, 174);
+  box-shadow: 0px 1px 1px rgb(177, 174, 174);
   border-radius: 8px;
   cursor: pointer;
 }
 
 .card img {
   width: 100%;
+  background-size: contain;
+  border-radius: 8px 8px 0 0;
 }
 .card h4,
 p {
@@ -98,14 +129,25 @@ p {
   .form input {
     width: 400px;
   }
-  .card img {
+  .card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .img-container {
     height: 200px;
+  }
+
+  .card img {
     width: 100%;
+    height: 100%;
+    object-fit: cover;
   }
 
   #countries {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-gap: 10px;
+    grid-gap: 50px;
   }
 }

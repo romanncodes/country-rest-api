@@ -30,3 +30,34 @@ const api = async () => {
   }
 };
 api();
+
+var light = true;
+
+document.getElementById("mode").addEventListener("click", () => {
+  if (light) {
+    document.querySelector("nav").classList.add("dark-nav");
+    document.querySelector("body").classList.add("dark-body");
+    document.querySelector("input").classList.add("dark-controls");
+    document.querySelector("select").classList.add("dark-controls");
+    var cards = document.getElementsByClassName("card");
+
+    for (var i = 0; i < 250; i++) {
+      cards[i].style.background = "var(--DarkBlueElements)";
+      cards[i].style.color = "white";
+      cards[i].style.boxShadow = "0px 0px 1px black";
+    }
+    light = false;
+  } else {
+    document.querySelector("nav").classList.remove("dark-nav");
+    document.querySelector("body").classList.remove("dark-body");
+    document.querySelector("select").classList.remove("dark-controls");
+    document.querySelector("input").classList.remove("dark-controls");
+    var cards = document.getElementsByClassName("card");
+    for (var i = 0; i < 250; i++) {
+      cards[i].style.background = "white";
+      cards[i].style.color = "black";
+      cards[i].style.boxShadow = "0px 0px 1px rgb(177, 174, 174)";
+    }
+    light = true;
+  }
+});

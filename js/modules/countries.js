@@ -29,7 +29,9 @@ export default {
   card_country: function (country) {
     return `
       <div class="card">
+        <div class="img-container">
         <img  src="${country.flag}" alt="" />
+        </div>
         <h4>${country.name}</h4>
         <p>
           Population:${country.population} <br/>
