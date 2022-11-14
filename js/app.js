@@ -9,7 +9,7 @@ var countries_panel = document.getElementById("countries");
 
 const api = async () => {
   try {
-    const res = await fetch("https://restcountries.eu/rest/v2/all");
+    const res = await fetch("https://restcountries.com/v3.1/all");
     const data = await res.json();
     countries_panel.innerHTML = countries.printAllCountries(data);
     document.getElementById("region").addEventListener("change", (e) => {
