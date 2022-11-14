@@ -36,7 +36,7 @@ export default {
         <p>
           Population:${country.population} <br/>
           Region: ${country.region}<br/>
-          Capital: ${country.capital[0]}
+          Capital: ${country.capital}
         </p>
       </div>    
     `;
