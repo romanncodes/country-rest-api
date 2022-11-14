@@ -46,7 +46,7 @@ export default {
 
     document.getElementById("txt").style.display = "none";
     document.getElementById("region").style.display = "none";
-    const res = await fetch("https://restcountries.eu/rest/v2/all");
+    const res = await fetch("https://restcountries.com/v3.1/all");
     const data = await res.json();
     var country_array = data.filter((country) => country.name === name);
     this.paint_detail(country_array[0]);
