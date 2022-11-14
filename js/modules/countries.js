@@ -28,15 +28,15 @@ export default {
   },
   card_country: function (country) {
     return `
-      <div onclick="country_event('${country.name}')" class="card">
+      <div onclick="country_event('${country.name.common}')" class="card">
         <div class="img-container">
-        <img  src="${country.flag}" alt="" />
+        <img  src="${country.flags.png}" alt="" />
         </div>
-        <h4>${country.name}</h4>
+        <h4>${country.name.common}</h4>
         <p>
           Population:${country.population} <br/>
           Region: ${country.region}<br/>
-          Capital: ${country.capital}
+          Capital: ${country.capital[0]}
         </p>
       </div>    
     `;
