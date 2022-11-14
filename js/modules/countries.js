@@ -20,7 +20,7 @@ export default {
   filterByText(data, text) {
     var card = "";
     data
-      .filter((country) => country.name.toLowerCase().indexOf(text) != -1)
+      .filter((country) => country.name.common.toLowerCase().indexOf(text) != -1)
       .forEach((item) => {
         card += this.card_country(item);
       });
@@ -48,7 +48,7 @@ export default {
     document.getElementById("region").style.display = "none";
     const res = await fetch("https://restcountries.com/v3.1/all");
     const data = await res.json();
-    var country_array = data.filter((country) => country.name === name);
+    var country_array = data.filter((country) => country.name.common === name);
     this.paint_detail(country_array[0]);
     console.log(country_array[0]);
   },
